@@ -23,6 +23,8 @@ namespace HuntTheWumpus
     {
         if (trigger->Properties().m_carryableByBats && m_providers.m_change.IsPlaying())
         {
+            m_providers.m_notification.Notify(HuntTheWumpus::UserNotification::Notification::BatTriggered);
+
             const auto cave = m_cave.lock();
 
             // Carry to another spot.
@@ -39,8 +41,6 @@ namespace HuntTheWumpus
             }
 
             cave->GetDungeon().Move(trigger->GetIdentifier(), newCaveId);
-
-            m_providers.m_notification.Notify(HuntTheWumpus::UserNotification::Notification::BatTriggered);
 
             return true;
         }
