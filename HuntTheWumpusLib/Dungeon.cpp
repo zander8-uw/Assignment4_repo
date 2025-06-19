@@ -211,10 +211,9 @@ namespace HuntTheWumpus
 
             if (m_providers.m_change.IsPlaying())
             {
-                MoveDenizenRandomly(m_caveDenizens.at({ Category::Wumpus, 0 }));
                 m_providers.m_notification.Notify(HuntTheWumpus::UserNotification::Notification::ObserveMiss);
                 m_providers.m_notification.Notify(HuntTheWumpus::UserNotification::Notification::WumpusAwoken);
-
+                MoveDenizenRandomly(m_caveDenizens.at({ Category::Wumpus, 0 }));
             }
 
             // The wumpus move could have ended the game, so check again.
