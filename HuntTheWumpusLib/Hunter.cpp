@@ -32,7 +32,15 @@ namespace HuntTheWumpus
     {
         if (trigger->Properties().m_fatalToHunter)
         {
-            m_providers.m_notification.Notify(UserNotification::Notification::HunterEaten);
+            if (trigger->GetIdentifier().m_category == Category::Arrow)
+            {
+                m_providers.m_notification.Notify(UserNotification::Notification::HunterShot);
+            }
+            else
+            {
+                m_providers.m_notification.Notify(UserNotification::Notification::HunterEaten);
+            }
+
             m_providers.m_change.GameOver(false);
             return true;
         }
