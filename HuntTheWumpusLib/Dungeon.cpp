@@ -240,4 +240,3 @@ namespace HuntTheWumpus
         Move(denizen->GetIdentifier(), caveTunnels[newRandomId]);
     }
 }
-//
