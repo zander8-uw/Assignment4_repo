@@ -9,6 +9,25 @@
 
 namespace TestHuntTheWumpus
 {
+    struct TestNotificationChecks
+    {
+        bool observeWumpusCheck = false;
+        bool observePitCheck = false;
+        bool observeBatCheck = false;
+        bool observeMissCheck = false;
+        bool observeOutOfArrowsCheck = false;
+        bool batTriggeredCheck = false;
+        bool pitTriggeredCheck = false;
+        bool wumpusTriggeredCheck = false;
+        bool wumpusAwokenCheck = false;
+        bool wumpusShotCheck = false;
+        bool hunterEatenCheck = false;
+        bool hunterShotCheck = false;
+        bool caveEnteredCheck = false;
+        bool reportIllegalMoveCheck = false;
+        bool reportNeighboringCavesCheck = false;
+    };
+
     struct TestEnvironment
     {
         TestEnvironment();

@@ -44,7 +44,7 @@ namespace HuntTheWumpus
 
     private:
         // holds the callbacks
-        std::unordered_map<UserNotification::Notification, std::vector<std::function<void()>>> m_callbacks;
+        std::unordered_map<UserNotification::Notification, std::function<void()>> m_callbacks;
  
     };
 }

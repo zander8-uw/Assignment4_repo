@@ -52,8 +52,8 @@ namespace TestHuntTheWumpus
         CHECK( bat.ObserveCaveEntrance(hunter));
 
         //// Show that we get the desired random cave.
-        //CHECK_EQUAL( 57, env.m_dungeon.m_requestedDestination );
-        //CHECK_EQUAL( HuntTheWumpus::Category::Hunter, env.m_dungeon.m_thingToMove.m_category);
+        CHECK_EQUAL( 57, env.m_dungeon.m_requestedDestination );
+        CHECK_EQUAL( HuntTheWumpus::Category::Hunter, env.m_dungeon.m_thingToMove.m_category);
     }
 
     TEST(BatSuite, Bat_IgnoresWumpus)
