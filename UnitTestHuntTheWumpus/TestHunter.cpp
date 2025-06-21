@@ -68,9 +68,9 @@ namespace TestHuntTheWumpus
         // This should return true that there was an action taken.
         CHECK(hunter.ObserveCaveEntrance(wumpus));
 
-        //// Show that a state-change happened to a "lost" result.
-        //CHECK(env.m_state.m_gameOverCalled);
-        //CHECK(!env.m_state.m_gameOverResult);
+        // Show that a state-change happened to a "lost" result.
+        CHECK(env.m_state.m_gameOverCalled);
+        CHECK(!env.m_state.m_gameOverResult);
     }
 
     TEST(HunterSuite, Hunter_OnCaveEntrance_ShotByArrow)

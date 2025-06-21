@@ -12,13 +12,17 @@ namespace TestHuntTheWumpus
     struct TestEnvironment
     {
         TestEnvironment();
+        void MakeTestNotifications();
 
         TestRandomProvider m_provider;
         HuntTheWumpus::UserNotification m_userNotifier;
+
         TestGameState m_state;
 
         HuntTheWumpus::Context m_context{ .m_notification = m_userNotifier, .m_random = m_provider, .m_change = m_state };
 
         TestDungeon m_dungeon;
+
+        TestNotificationChecks m_testNotifications;
     };
 }
